@@ -1,0 +1,464 @@
+/*
+Theme Name:MJ.ulvis 1.1
+Author: MJD thif 
+Author URL: www.ulvis.se
+Version: 1.0
+*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: whitesmoke;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+/*Global*/
+
+div.containerM {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+
+}
+
+/* Header */
+
+.site-header {
+	background: url(footer-center.jpg) 100px -290px;
+	margin-bottom: 60px;
+	border-bottom: 4px solid #014F56;
+	border-top: 2px solid #014F56;
+	transition:border-bottom,3s;
+ 
+	
+	
+}
+.site-header:hover {
+	border-bottom:4px solid goldenrod;
+}
+
+/*Navigation bar */
+
+.nav-container {
+
+	border-top: 1px solid goldenrod;
+	margin-bottom: -10px;
+}
+
+.site-nav {
+	margin-right: 25px;
+	padding: 14px 0px;
+	transition: 
+}
+
+
+.site-nav ul li {
+	float: right;
+	display: block;
+	list-style: none;
+	margin-bottom: 18px;
+}
+
+.site-nav ul li a {
+	margin: 0px 5px;
+	color: #B8CCCE;
+	padding: 8px 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 15px;
+	background-color: rgba(0, 0, 0, 0.9);
+	border-left: 2px solid #014F56;
+	border-bottom: 2px solid #014F56;
+	border-radius: 20px/40px;
+
+}
+
+.site-nav a:hover {
+	color: white;
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+	background-color: #1E314F;
+
+	
+
+}
+
+.site-header nav ul li.current-menu-item a {
+	background: #1E314F;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	color: white;
+}
+
+
+/*========The foooter-===-=-=-=-=-=-=*/
+
+.site-footer {
+	background: url(footer-center.jpg);
+	border-top: 7px solid #014F56;
+	border-bottom: 3px solid #014F56;
+}
+
+.footer-loc {
+	color: #fff;
+	text-align: center;
+	margin: 10px;
+	font-size: 12px;
+}
+
+#separator {
+	color: red;
+	font-size: 20px;
+}
+
+
+.site-nav-footer {
+	margin: 20px 0px;
+	margin-right: 20px;
+}
+
+.site-nav-footer li {
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	list-style: none;
+}
+
+.site-nav-footer ul li a {
+	color: #B8CCCE;
+	text-decoration: none;
+	border-left: 3px solid #014F56;
+	border-bottom: 2px solid #014F56;
+	padding: 5px;
+	padding: 5px 10px;
+	border-radius: 40px;
+	font-size: 14px;
+
+}
+
+.site-nav-footer ul li a:hover {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-left: 3px solid white;
+	border-bottom: 2px solid white;
+
+}
+
+.site-nav-footer ul li.current-menu-item a {
+	background-color: rgba(0, 0, 0, 0.9);
+	color: white;
+	border: 2px solid white;
+}
+
+/*	0=======0010101010101 The logo style*/
+
+#logo-container a {
+	animation: Mj-logo-ani 2s;
+	animation-fill-mode:both;
+	animation-direction:alternate;
+	animation-iteration-count: infinite;
+	
+	
+	float: left;
+	color: white;
+	text-decoration: none;
+	opacity: 0.7;
+	font-size: 35px;
+	margin: 15px 40px;
+	 
+}
+
+
+#logo-container span {
+	color: goldenrod;
+	font-size: 49px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-radius: 20px;
+	padding: 10px 0px 5px 0px;
+}
+
+#logo-container a:hover {
+	color: goldenrod;
+	 
+}
+
+
+
+
+
+
+/*In order to create an animation in CSS, we can make the rules of the animation and then apply the animation function as we can say to any element, in this case we don't need to repeat the code over and over again.*/
+
+
+/*To start an animation, we use "The Keyframe" and then we declere the statments that we want to apply on the element or the shape or whatsoever .1.First step is naming the animation*/
+
+/*This the first step*/
+
+@keyframes mj-animation {
+/*	inside it, we declare the statements*/
+	
+	0%{ 
+		opacity: 0;
+		transform: translateY(-60px);
+	}
+	100%{ 
+	opacity: 1;
+	transform: translateY(0px);
+	}
+}
+
+
+
+/*The section is bulit for making an animation , that will slid the logo to the far right and backtrack it to the far left in reverse.*/
+
+@keyframes Mj-logo-ani{ 
+	0%{
+		transform: translateX(+20px);
+		
+	}
+	
+	100%{
+		transform: translateX(-10);
+	}
+	
+
+}
+
+/*Making the wbsite responsive secation.*/
+
+/*We begin with the tap approach.*/
+
+@media screen and (max-width:765px) {
+	/*	Global ruls@querey */
+	div.containerM {
+		width: auto;
+		margin: 15px;
+	}
+
+	/*	Navigation bar @querey */
+	.site-header {
+		margin-bottom: 10px;
+		border-bottom: 2px solid #014F56;
+	}
+	.site-nav {
+		width: auto;
+		float: none;
+		padding: 0px;
+		margin: 6px 10px 7px 0px;
+	}
+
+	.site-nav ul li {
+		margin-bottom: 20px;
+	}
+
+	site-nav ul li a {
+		margin: 0px 3px;
+		color: #B8CCCE;
+		padding: 8px;
+		font-size: 14px;
+	}
+}
+
+
+
+
+/* The burger menu....
+	.burger-menu{ 
+	  	background:url(mjmj.png) no-repeat 95% center ; 
+		display: block ;
+		width: 100%; 
+		height:35px;
+		position: fixed;
+		top: 0px;
+   		background-color: red;
+		
+		 
+		
+
+		 
+	}	
+	.nav-container {
+		margin: 20px 0px; 
+		border-top:none;
+		border-bottom: 4px solid goldenrod;
+	}	
+	.site-header {
+		border:0px;
+		
+	}
+	.site-nav  { 
+		width: 100%; 
+		position: fixed;
+		top:32px;
+		overflow:hidden;
+		height:0px;	
+	}
+	.site-nav.open{ 
+		height: auto; 
+	}
+	.site-nav ul li {
+		list-style: none;
+		float: none;
+		margin: .5px 0px;
+	}
+	.site-nav ul li a {
+		margin: 0px;
+		padding: 8px;
+		display: block;
+		text-align: center;
+		background-color: #014F56;
+		border: 1px solid goldenrod;
+		border-radius: 4px;
+	}
+	.site-nav a:hover {
+		color: white;
+		border: 1px solid white;
+		background-color: #1E314F;
+	}
+	.site-header nav ul li.current-menu-item a {
+		background: #1E353F;
+		border: 1px solid white;
+		color: white;
+		padding: 8px;
+	}
+	
+	*/
+
+@media screen and (max-width:480px) {
+
+	div.containerM {
+		margin: 0px 8px;
+		font-size: 16px;
+	}
+
+
+	/*Navigation bar */
+	.nav-container {
+		border-top: 1px solid goldenrod;
+		border-bottom: 4px solid goldenrod;
+	}
+
+	.site-header {
+
+		border-bottom: 0px;
+	}
+
+	.site-nav {
+		margin: 0px 2px;
+		padding: 0px;
+	}
+
+	.site-nav ul li {
+		list-style: none;
+		display: block;
+		float: none;
+		margin-bottom: 4px;
+
+	}
+
+	.site-nav ul li a {
+		margin: 0px;
+		padding: 8px;
+		display: block;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.3);
+		border: 1px solid #014F56;
+		border-radius: 4px;
+	}
+
+	.site-nav a:hover {
+		color: white;
+		border: 1px solid white;
+		background-color: #1E314F;
+	}
+
+	.site-header nav ul li.current-menu-item a {
+		background: #1E353F;
+		border: 1px solid white;
+		color: white;
+		padding: 8px;
+	}
+
+
+
+	/* 	 the logo style */
+	#logo-container a {
+		float: none;
+		display: block;
+		margin: 40px 30% 0px;
+		width: 40%;
+		text-align: center;
+	
+	}
+	
+	
+	
+	
+
+	/*the footer style*/
+	.site-nav-footer {
+		margin: 0px 10px;
+	}
+
+	.site-nav-footer li {
+		width: auto;
+		margin-left: 3px;
+		margin-bottom: 5px;
+		list-style: none;
+		display: inline-block;
+		float: none;
+	}
+	.site-nav-footer ul li a {
+		border-bottom: none;
+		padding: 5px;
+		padding-left: 10px;
+		border-left: 3px solid #014F56;
+		border-radius: 10px;
+	}
+
+
+
+}
+
+
+
+
+
+/*==-=-=-=-=-=@@@@@@@ -=-=-=-=-=-=-*/
+
+/*Needed for the clear and  the fonts on other websites*/
+
+.fix {
+	clear: both;
+}
+
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	zoom: 1;
+}
+
+textarea {
+	-webkit-box-sizing: border-box;
+	/* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;
+	/* Firefox, other Gecko */
+	box-sizing: border-box;
+	/* Opera/IE 8+ */
+}
